@@ -14,6 +14,20 @@ function createCard() {
         const button = document.createElement("button");
         button.classList.add("card-btn");
         button.textContent = "Learn More";
+
+        if (card.name.toUpperCase() === "SUVS") {
+            button.addEventListener("click", () => {
+                window.open("https://www.caranddriver.com/rankings/best-suvs", "_blank");
+            });
+        } else if (card.name.toUpperCase() === "SEDANS") {
+            button.addEventListener("click", () => {
+                window.open("https://www.caranddriver.com/rankings/best-sedans", "_blank");
+            });
+        } else if (card.name.toUpperCase() === "LUXURY") {
+            button.addEventListener("click", () => {
+                window.open("https://www.caranddriver.com/rankings/best-luxury-cars", "_blank");
+            });
+        }
         cardElement.appendChild(button);
         cards.appendChild(cardElement);
     })
