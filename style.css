@@ -138,4 +138,9 @@ main {
   .cards .card:nth-child(3) {
     grid-column: unset;
   }
+
+  .card-content {
+    width: fit-content;
+    margin: 0 auto;
+  }
 }
