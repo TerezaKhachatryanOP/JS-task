@@ -71,10 +71,10 @@ main {
 }
 
 .card {
-  justify-content: center;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   height: 100%;
 }
 
@@ -83,18 +83,19 @@ main {
   height: 2.5rem;
 }
 
-.card-desc {
-  max-width: 22rem;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 100%;
-}
-
 .card-title {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 2rem;
-  line-height: 2.5rem;
-  margin-bottom: 0.5rem;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+.card-desc {
+  max-width: 22rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 0 2rem;
 }
 
 .card-btn {
@@ -110,12 +111,22 @@ main {
   margin: 0 auto;
 }
 
-@media (min-width: 40.625rem) {
+@media (min-width: 40.625rem) and (max-width: 65.624rem) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .cards .card:nth-child(3) {
     grid-column: 1 / -1;
+  }
+
+  .card-luxury .card-content {
+    margin: 0 auto;
+  }
+
+  .card-luxury .card-btn {
+    margin: 0;
+    align-self: center;
   }
 }
 
@@ -123,6 +134,7 @@ main {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .cards .card:nth-child(3) {
     grid-column: unset;
   }

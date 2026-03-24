@@ -7,9 +7,11 @@ function createCard() {
         cardElement.classList.add("card");
         cardElement.classList.add(`card-${card.name.toLowerCase()}`);
         cardElement.innerHTML = `
-            <img src=${card.img} alt=${card.name} class="card-img">
-            <h1 class="card-title">${card.name}</h1>
-            <p class="card-desc">${card.decs}</p>
+            <div class="card-content">
+                <img src=${card.img} alt=${card.name} class="card-img">
+                <h1 class="card-title">${card.name}</h1>
+                <p class="card-desc">${card.decs}</p>
+            </div>
         `
         const button = document.createElement("button");
         button.classList.add("card-btn");
