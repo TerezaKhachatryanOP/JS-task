@@ -1,60 +1,111 @@
 :root {
-    --sedan-bg: #E38826;
-    --suvs-bg: #006970;
-    --luxury-bg: #004241;
-    --light-gray: #F2F2F2;
-    --white: #FFFFFF;
+  --sedan-bg: #e38826;
+  --suvs-bg: #006970;
+  --luxury-bg: #004241;
+  --light-gray: #f2f2f2;
+  --white: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.card-title, .card-desc {
-    color: var(--white);
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card-title,
+.card-desc {
+  color: var(--white);
 }
 
 .card-sedan {
-    background: var(--sedan-bg);
+  background: var(--sedan-bg);
 }
 
 .card-sedan .card-btn:hover {
-    color: var(--sedan-bg);
-    background: var(--light-gray);
-    transition: all 0.3s ease;
+  color: var(--sedan-bg);
+  background: var(--light-gray);
+  transition: all 0.3s ease;
 }
 
 .card-suvs {
-    background: var(--suvs-bg);
+  background: var(--suvs-bg);
 }
 
 .card-suvs .card-btn:hover {
-    color: var(--suvs-bg);
-    background-color: var(--light-gray);
-    transition: all 0.3s ease;
+  color: var(--suvs-bg);
+  background-color: var(--light-gray);
+  transition: all 0.3s ease;
 }
 
 .card-luxury {
-    background: var(--luxury-bg);
+  background: var(--luxury-bg);
 }
 
 .card-luxury .card-btn:hover {
-    background-color: var(--light-gray);
-    color: var(--luxury-bg);
-    transition: all 0.3s ease;
+  background-color: var(--light-gray);
+  color: var(--luxury-bg);
+  transition: all 0.3s ease;
+}
+
+.cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
 }
 
 .card {
-    padding: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img {
+  width: 4rem;
+  height: 2.5rem;
+}
+
+.card-desc {
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    margin-bottom: .5rem;
 }
 
 .card-btn {
-    color: var(--white);
-    padding: 1rem 2rem;
-    background: none;
-    border: 1px solid var(--light-gray);
-    cursor: pointer;
-    border-radius: 2rem;
-    font-weight: 600;
+  color: var(--white);
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+  border-radius: 2rem;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
 }
 
+@media (min-width: 40.625rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards .card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
