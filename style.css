@@ -1,0 +1,60 @@
+:root {
+    --sedan-bg: #E38826;
+    --suvs-bg: #006970;
+    --luxury-bg: #004241;
+    --light-gray: #F2F2F2;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+}
+
+.card-title, .card-desc {
+    color: var(--white);
+}
+
+.card-sedan {
+    background: var(--sedan-bg);
+}
+
+.card-sedan .card-btn:hover {
+    color: var(--sedan-bg);
+    background: var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.card-suvs {
+    background: var(--suvs-bg);
+}
+
+.card-suvs .card-btn:hover {
+    color: var(--suvs-bg);
+    background-color: var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.card-luxury {
+    background: var(--luxury-bg);
+}
+
+.card-luxury .card-btn:hover {
+    background-color: var(--light-gray);
+    color: var(--luxury-bg);
+    transition: all 0.3s ease;
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card-btn {
+    color: var(--white);
+    padding: 1rem 2rem;
+    background: none;
+    border: 1px solid var(--light-gray);
+    cursor: pointer;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+

@@ -5,6 +5,7 @@ function createCard() {
     cardDetails.forEach((card) => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
+        cardElement.classList.add(`card-${card.name.toLowerCase()}`);
         cardElement.innerHTML = `
             <img src=${card.img} alt=${card.name} class="card-img">
             <h1 class="card-title">${card.name}</h1>
